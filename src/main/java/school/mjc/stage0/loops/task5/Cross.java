@@ -2,9 +2,10 @@ package school.mjc.stage0.loops.task5;
 
 public class Cross {
     public void printCross(int sideLength) {
-        for (int i=1; i<sideLength; i++){
-            for (int j=1; j<sideLength; j++){
-                if (i==j || sideLength-i==j)
+        int middle = sideLength/2+1;
+        for (int i=1; i<=sideLength; i++){
+            for (int j=1; j<=sideLength; j++){
+                if (j==middle || i==middle)
                     System.out.print('8');
                 else
                     System.out.print(' ');
@@ -12,5 +13,9 @@ public class Cross {
             System.out.println();
         }
 
+    }
+    public static void main(String[] args) {
+        Cross cross = new Cross();
+        cross.printCross(3);
     }
 }
