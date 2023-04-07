@@ -7,7 +7,7 @@ public class Hourglass {
                 if (i==1|| i==height)
                     System.out.print("8");
                 else 
-                    if ((i<=j &&  height>=j) || (i>=j &&  height<=j))
+                    if ((i<=j &&  height-i+1>=j) || (i>=j &&  height-i+1<=j))
                         System.out.print("8");    
                     else
                         System.out.print(" ");
@@ -15,5 +15,9 @@ public class Hourglass {
             }
             System.out.println();
         }
+    }
+    public static void main(String[] args) {
+        Hourglass hourglass = new Hourglass();
+        hourglass.printHourglassOfGivenSize(6);
     }
 }
